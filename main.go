@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 
 	//	"reflect"
 	"strings"
@@ -21,8 +22,11 @@ func main() {
 	// fmt.Println("length is: ", length)
 
 	// defer file.Close()
+	myprogName := os.Args[0]
+	fmt.Println(myprogName)
+	filename := os.Args[1]
 
-	implementWC("./mylog.txt")
+	implementWC(filename)
 }
 
 func wc(filename string) {
